@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Atividade JS</title>
+    </head>
+    <body>
+        <div id="lampada">
+            <img src="https://github.com/gabrieldarezzo/helpjs-ravi/blob/master/images/lampada.jpg?raw=true" onmouseover="trocaImagem()">
+        </div>
+        <script>
+            function trocaImagem(){
+                var imagem = document.getElementById("lampada").getElementsByTagName("img")[0].src;
+                if(imagem != "https://github.com/gabrieldarezzo/helpjs-ravi/blob/master/images/lampada-on.jpg?raw=true"){
+                    document.getElementById("lampada").getElementsByTagName("img")[0].src = "https://github.com/gabrieldarezzo/helpjs-ravi/blob/master/images/lampada-on.jpg?raw=true";
+                }
+                else{
+                    document.getElementById("lampada").getElementsByTagName("img")[0].src = "https://github.com/gabrieldarezzo/helpjs-ravi/blob/master/images/lampada.jpg?raw=true";
+                }
+            }
+        </script> 
+    </body> 
+</html>

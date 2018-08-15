@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Contador</title>
+    </head>
+    <body>
+
+        <div id="container">
+            <h1>Olá!</h1>
+            <div id="contWrapper">
+                <p id="contador">
+                    
+                </p>
+            </div>
+        </div>
+
+        <script>
+            
+            var cont = 5;
+            var interval = 0;
+
+            interval = setInterval(decrease, 1000);
+
+            function decrease(){
+                if(cont == 0){
+                    document.getElementById("contador").innerHTML = cont; 
+                    clearInterval(interval);
+                }else{
+                    document.getElementById("contador").innerHTML = cont;
+                    cont--;  
+                }
+
+            }
+
+        </script>
+
+    </body>
+</html>

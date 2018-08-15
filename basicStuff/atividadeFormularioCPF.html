@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Atividade CPF</title>
+    </head>
+    <body>
+        <div id = "formWrapper">
+            <form id="formCPF">
+                <p>Digite o seu CPF: </p>
+                <input type="text" name="cpf" id="cpfField">
+                <button type="submit" onclick="pegarCpf()">Enviar</button>
+            </form>
+        </div>
+        <script>
+            function pegarCpf(){
+                var cpf = document.getElementById("cpfField").value;
+                cpfFormatado = cpf.replace(".","");
+                alert(cpfFormatado);
+            }
+        </script>
+    </body>
+</html>

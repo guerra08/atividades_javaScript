@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Atividade soma</title>
+    </head>
+    <body>
+        <div id="formWrapper">
+                <p>Primeiro valor:</p>
+                <input type="text" id="valor1">
+                <p>Segundo valor:</p>
+                <input type="text" id="valor2">
+                <p>Resultado: </p>
+                <input type="resposta" id="answ">
+                <input type="submit" onclick="realizaOperacao(document.getElementById('valor1').value, document.getElementById('valor2').value)">
+                <input type="submit" onclick="fundoVerde()" value="Fundo verde"> 
+                <input type="submit" onclick="fundoRed()" value="Fundo vermelho ">
+        </div>
+        <script>
+            function realizaOperacao(valor1, valor2){
+
+                var result;
+                
+                if(valor1 != "" && valor2 != ""){
+
+                    if(!isNaN(valor1) && !isNaN(valor2)){
+
+                        v1 = Number(valor1);
+                        v2 = Number(valor2);
+                        result = v1+v2;
+
+                    }
+                    else{
+                        
+                        result = valor1 + valor2;
+
+                    }
+
+                }
+
+                else{
+
+                    result = 0;
+
+                }
+
+                document.getElementById("answ").value = result;
+
+            }
+
+            function fundoVerde(){
+
+                if(document.getElementById("formWrapper").style.backgroundColor=="green"){
+                    document.getElementById("formWrapper").style.backgroundColor="white"
+                }else{
+                document.getElementById("formWrapper").style.backgroundColor="green";
+                }
+
+            }
+
+            function fundoRed(){
+
+                if(document.getElementById("formWrapper").style.backgroundColor=="red"){
+                    document.getElementById("formWrapper").style.backgroundColor="white"
+                }else{
+                document.getElementById("formWrapper").style.backgroundColor="red";
+                }
+
+            }
+        </script>
+    </body>
+</html>
